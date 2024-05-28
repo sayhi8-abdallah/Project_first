@@ -1,0 +1,9 @@
+h1.page-head {
+  padding: 20px;
+  display: inline-block;
+  position: relative;
+  left: 36%;
+  border: none;
+  background-color: #0074ff;
+  border-radius: 35px;
+}

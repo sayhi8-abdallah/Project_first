@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EEE;
+  font-family: Arial, Tahoma;
+}
+
+.page-head,
+.page-description {
+  text-align: center;
+}
+
+.page-head {
+  font-size: 40px;
+  margin: 20px 0 0;
+}
+
+.page-description {
+  font-size: 20px;
+  margin: 10px 0 40px;
+}
+
+.page {
+  height: 100vh;
+}
+
+.page::before {
+  content: "";
+  position: fixed;
+  width: 300%;
+  height: 100%;
+  background-color: #0075ff;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) skew(0, -10deg);
+  border-radius: 50%;
+  z-index: -1;
+  animation: waving 2s ease-in-out infinite alternate;
+}
+
+@keyframes waving {
+  from {
+    transform: translateX(-50%) skew(0, -10deg);
+  }
+
+  to {
+    transform: translateX(-30%) skew(10deg, 0);
+  }
+}

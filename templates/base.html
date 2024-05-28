@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <link
+      rel="stylesheet"
+      ,
+      href="{{ url_for( 'static', filename='css/main.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      ,
+      href="{{ url_for( 'static', filename='css/hand.css')}}"
+    />
+    {% if custom_css %}
+    <link
+      rel="stylesheet"
+      ,
+      href="{{ url_for( 'static', filename = 'css/' + custom_css + '.css')}}"
+    />
+    {% endif %} {% if database %}
+    <link
+      rel="stylesheet"
+      ,
+      href="{{ url_for( 'static', filename = 'db/' + database + '.db')}}"
+    />
+    {% endif %}
+    <link
+      rel="icon"
+      href="{{ url_for( 'static', filename='images\AboUbaida.png')}}"
+    />
+  </head>
+  <body>
+    {% block body %}
+    <div class="page">
+      <div class="card">
+        <img
+          src="https://via.placeholder.com/280x400/0075ff/FFF?text=card"
+          alt=""
+        />
+        <h2>Card Title</h2>
+        <p>Lorem ipsum, dolor sit amet.</p>
+      </div>
+    </div>
+    {% endblock %}
+    <script src="{{ url_for( 'static', filename='js/jquery-3.7.1.min.js')}}"></script>
+    <script src="{{ url_for( 'static', filename='js/main.js')}}"></script>
+  </body>
+</html>
