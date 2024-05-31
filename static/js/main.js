@@ -1,13 +1,15 @@
+/* How are you every body */
+
 $(function () {
 
-    $(".skill-progress span").each(function () {
+  $(".skill-progress span").each(function () {
 
-        $(this).animate({
+    $(this).animate({
 
-            'width': $(this).data("width")
+      'width': $(this).data("width")
 
-        }, 2000);
+    }, 2000);
 
-    });
+  });
 
 })
